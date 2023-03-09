@@ -17,10 +17,11 @@ public class Actividad2_main {
         Actividad2 a2 = new Actividad2();
         Scanner sc = new Scanner(System.in);
         
+        System.out.println("Σ = {a,b}");
         System.out.println("Ingrese n =");
         int n = sc.nextInt();
         a2.algoritmo(n);
         
-        System.out.println(a2.L.toString());
+        System.out.println("L = " + a2.L.toString());
     }
 }
