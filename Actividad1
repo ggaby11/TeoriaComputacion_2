@@ -26,11 +26,15 @@ elif entrada == 4:
 
 elif entrada == 5:
     w = input("Ingrese una cadena para hallar sus subcadenas = ")
-    n = 0
-    while n <= len(w):
-        if n == 0: print("λ")
-        else: print(w[:n])
-        n += 1
+    cadena = w
+    print("λ")
+    while len(cadena) >= 1:
+        n = 1
+        while n <= len(cadena):
+            print(cadena[:n])
+            n += 1
+        cadena = cadena[1:]
+
 elif entrada == 6:
     w = input("Ingrese una cadena para hallar sus subcadenas = ")
     print("\nPrefijos")
@@ -45,4 +49,5 @@ elif entrada == 6:
         if n == 0: print("λ")
         else: print(w[::-1][:n])
         n += 1
+        
 else: print("Entrada no valida")
