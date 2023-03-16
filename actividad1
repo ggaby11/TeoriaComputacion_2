@@ -1,26 +1,48 @@
-#Practica de alfabetos, cadenas y lenguajes
-#Cuantas cadenas se ingresan? Opcion de crear las cadenas random
-
-print ("Ingrese dos cadenas")
-u = input("u = ")
-v = input("v = ")
+# Practica de alfabetos, cadenas y lenguajes
+# Cuantas cadenas se ingresan? Opcion de crear las cadenas random
 
 print("¿Que accion desea realizar?")
-entrada = int(input("\n1.Concatenacion \n2.Potenciacion \n3.Averiguar longitud \n4.Invertit cadena\n \n5.Subcadenas \n6.Prefijos y sufijos"))
+entrada = int(input(
+"\n1.Concatenacion \n2.Potenciacion \n3.Averiguar longitud \n4.Invertit cadena \n5.Subcadenas \n6.Prefijos y sufijos\n"))
 
 if entrada == 1:
-   print(f'Concatenacion = {u + v}')
+    print("Ingrese dos cadenas = ")
+    u = input("u = ")
+    v = input("v = ")
+    print(f'Concatenacion = {u + v}')
+    
 elif entrada == 2:
-    z = input("Quiere potenciar la cadena 'u' o la cadena 'v'")
-    n = int(input("n = "))
-    if z == "u": print (u * n)
-    else: print (v * n)
+    w = input("Ingrese una cadena = ")
+    n = int(input("n(cantidad de veces que se va a repetir) = "))
+    print(w * n)
+
 elif entrada == 3:
-    z = input("Quiere conocer la longitud de la cadena 'u' o de la cadena 'v'")
-    if z == "u": print(f'Longitud = {len(u)}')
-    else: print(f'Longitud = {len(v)}')
+    w = input("Ingrese una cadena para conocer su longitud = ")
+    print(f'Longitud = {len(w)}')
+
 elif entrada == 4:
-    z = input("Quiere conocer la inversa de la cadena 'u'' o de 'v'")
-    if z == "u": print(f'Inversa = {u[::-1]}')
-    else: print(f'Inversa = {u[::-1]}')
-else: print("Bye")
+    w = input("Ingrese una cadena para hallar su inversa = ")
+    print(f'Inversa = {w[::-1]}')
+
+elif entrada == 5:
+    w = input("Ingrese una cadena para hallar sus subcadenas = ")
+    n = 0
+    while n <= len(w):
+        if n == 0: print("λ")
+        else: print(w[:n])
+        n += 1
+elif entrada == 6:
+    w = input("Ingrese una cadena para hallar sus subcadenas = ")
+    print("Prefijos")
+    n = 0
+    while n <= len(w):
+        if n == 0: print("λ")
+        else: print(w[:n])
+        n += 1
+    print("Sufijos")
+    n = 0
+    while n <= len(w):
+        if n == 0: print("λ")
+        else: print(w[::-1][:n])
+        n += 1
+else: print("Entrada no valida")
