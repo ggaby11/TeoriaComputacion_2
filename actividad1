@@ -33,13 +33,13 @@ elif entrada == 5:
         n += 1
 elif entrada == 6:
     w = input("Ingrese una cadena para hallar sus subcadenas = ")
-    print("Prefijos")
+    print("\nPrefijos")
     n = 0
     while n <= len(w):
         if n == 0: print("λ")
         else: print(w[:n])
         n += 1
-    print("Sufijos")
+    print("\nSufijos")
     n = 0
     while n <= len(w):
         if n == 0: print("λ")
